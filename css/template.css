@@ -1,0 +1,221 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 24px;
+  background: #dbdbdbc3;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+#form {
+  width: min(560px, 92vw);
+  padding: 28px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: rgba(50, 50, 93, 0.2) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.15) 0px 18px 36px -18px;
+}
+
+#form h2 {
+  margin: 0 0 6px;
+}
+
+.hint {
+  margin: 0 0 18px;
+  color: #666;
+  font-size: 14px;
+}
+
+.field {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+input {
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 16px;
+}
+
+.btn-row {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#generate,
+#download {
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-family: "Montserrat", sans-serif;
+  width: 250px;
+  background: rgba(0, 0, 255, 0.5);
+  height: 50px;
+  transition: all 0.25s;
+}
+
+#generate:hover,
+#download:hover {
+  background: rgba(0, 0, 255, 0.7);
+}
+
+#certificate {
+  display: none;
+  width: min(1362px, 96vw);
+  position: relative;
+  background: #fff;
+  border: 1px solid #d3d3d3;
+  overflow: hidden;
+}
+
+#certificate img {
+  width: 100%;
+  display: block;
+}
+
+.layer {
+  position: absolute;
+  color: #e66b1f;
+  font-weight: 700;
+  white-space: nowrap;
+  line-height: 0.95;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  font-family: "Arno Pro Display", "Times New Roman", Times, serif;
+}
+
+.layer .suffix {
+  font-size: 0.62em;
+  vertical-align: super;
+}
+
+.overlay {
+  position: absolute;
+  left: 4.4%;
+  right: 4.4%;
+  top: 42%;
+  color: #1f5ea8;
+  font-family: "Lato", "Montserrat", sans-serif;
+}
+
+.cert-row {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.row-name {
+  font-size: clamp(12px, 1.05vw, 32px);
+}
+
+.row-desc {
+  margin-top: 6%;
+  font-size: clamp(12px, 1.02vw, 31px);
+}
+
+.row-position {
+  margin-top: 3%;
+  font-size: clamp(12px, 1.05vw, 32px);
+}
+
+.row-org {
+  margin-top: 3.7%;
+  font-size: clamp(12px, 1.02vw, 31px);
+  gap: 4px;
+}
+
+.field-line {
+  display: inline-flex;
+  justify-content: center;
+  align-items: baseline;
+  border-bottom: 2px solid #1f5ea8;
+  min-height: 0.95em;
+  padding: 0 6px 0;
+  color: #e66b1f;
+  font-family: "Arno Pro Display", "Times New Roman", Times, serif;
+  font-weight: 700;
+  line-height: 0.95;
+  vertical-align: baseline;
+}
+
+.field-name {
+  width: 62%;
+  font-size: clamp(14px, 2.1vw, 58px);
+}
+
+.field-event {
+  width: 62%;
+  font-size: clamp(14px, 2.1vw, 58px);
+}
+
+.field-date {
+  border-bottom: none;
+  width: auto;
+  min-width: 18%;
+  justify-content: flex-start;
+  font-size: clamp(12px, 1.4vw, 36px);
+  line-height: 1;
+}
+
+.field-position {
+  border-bottom: 2px solid #1f5ea8;
+  width: auto;
+  min-width: 8%;
+  justify-content: center;
+  font-size: clamp(14px, 1.85vw, 48px);
+  line-height: 1;
+}
+
+.orange-static {
+  color: #e66b1f;
+  font-weight: 700;
+}
+
+.suffix {
+  font-size: 0.58em;
+  vertical-align: super;
+}
+
+#download {
+  display: none;
+}
+
+
+@media (max-width: 700px) {
+  body {
+    padding: 12px;
+  }
+
+  #form {
+    padding: 16px;
+  }
+}
+.participation-page {
+  position: relative;
+  background: url("../img/p-wlogo.avif") center/cover no-repeat fixed;
+}
+
+.participation-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.85);
+  z-index: -1;
+}

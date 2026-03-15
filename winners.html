@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Winner Certificate Generator</title>
+  <link rel="stylesheet" href="css/template.css" />
+  <link rel="icon" type="image/x-icon" href="img/icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+   <video id="background-video" class="desktop" autoplay playsinline loop muted>
+   <source src="baground.mp4" type="video/mp4">
+
+</video>
+  <div class="container">
+    <form action="#" id="form">
+      <h2>Winner Certificate</h2>
+      <p class="hint">Default template: <code>img/winner-template.png</code>. You can upload your own image.</p>
+
+      <div class="field">
+        <label for="name">Winner Name</label>
+        <input type="text" id="name" required />
+      </div>
+
+      <div class="field">
+        <label for="roll">Roll Number</label>
+        <input type="text" id="roll" required />
+      </div>
+
+      <div class="field">
+        <label for="event">Event Name</label>
+        <input type="text" id="event" required />
+      </div>
+
+      <div class="field">
+        <label for="position">Position</label>
+        <input type="text" id="position" placeholder="Example: 1st" required />
+      </div>
+
+      <div class="field">
+        <label for="date">Date</label>
+        <input type="text" id="date" placeholder="Example: 06-12-2025" required />
+      </div>
+
+      <div class="field">
+        <label for="template">Template Image (optional)</label>
+        <input type="file" id="template" accept="image/*" />
+      </div>
+
+      <div class="btn-row">
+        <button id="generate" type="submit">Generate</button>
+      </div>
+    </form>
+
+    <div id="certificate" aria-live="polite"></div>
+    <button id="download" type="button">Download PDF</button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="js/winners.js"></script>
+</body>
+
+</html>
