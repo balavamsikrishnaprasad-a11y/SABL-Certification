@@ -75,8 +75,8 @@ download.addEventListener("click", () => {
     margin: 0,
     filename: "participation-certificate.pdf",
     image: { type: "jpeg", quality: 0.98 },
-    html2canvas: { scale: 2 },
-    jsPDF: { unit: "px", format: "a2", orientation: "landscape" },
+    html2canvas: { scale: 3, useCORS: true, },
+    jsPDF: { unit: "mm", format: "a4", orientation: "landscape" },
   };
 
   html2pdf().set(opt).from(certificate).save();
